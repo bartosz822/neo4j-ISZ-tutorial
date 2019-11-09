@@ -6,8 +6,8 @@ def vis_network(nodes, edges, physics=False):
     html = """
     <html>
     <head>
-      <script type="text/javascript" src="../lib/vis.js"></script>
-      <link href="../lib/vis.css" rel="stylesheet" type="text/css">
+      <script type="https://raw.githubusercontent.com/bartosz822/neo4j-ISZ-tutorial/master/lib/vis.js"></script>
+      <link href="https://raw.githubusercontent.com/bartosz822/neo4j-ISZ-tutorial/master/lib/vis.css" rel="stylesheet" type="text/css">
     </head>
     <body>
     <div id="{id}"></div>
