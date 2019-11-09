@@ -4,3 +4,5 @@ py2neo
 jupytext
 pandas
 networkx
+matplotlib
+numpy
