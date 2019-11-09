@@ -83,11 +83,11 @@ def draw(graph, options, physics=False, limit=100):
     edges = []
 
     def get_vis_info(node, id):
-        node_label = list(node.labels())[0]
+        node_label = list(node.labels)[0]
         prop_key = options.get(node_label)
-        vis_label = node.properties.get(prop_key, "")
+        vis_label = node.get(prop_key, "")
 
-        return {"id": id, "label": vis_label, "group": node_label, "title": repr(node.properties)}
+        return {"id": id, "label": vis_label, "group": node_label, "title": repr(node)}
 
     for row in data:
         source_node = row[0]
@@ -107,6 +107,6 @@ def draw(graph, options, physics=False, limit=100):
             if target_info not in nodes:
                 nodes.append(target_info)
 
-            edges.append({"from": source_info["id"], "to": target_info["id"], "label": rel.type()})
+            edges.append({"from": source_info["id"], "to": target_info["id"], "label": rel.__class__.__name__})
 
     return vis_network(nodes, edges, physics=physics)
