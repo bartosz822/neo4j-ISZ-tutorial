@@ -7,3 +7,4 @@ tar -xvf neo4j-community-3.5.12-unix.tar.gz
 echo "dbms.connectors.default_listen_address=0.0.0.0" >> neo4j-community-3.5.12/conf/neo4j.conf
 
 neo4j-community-3.5.12/bin/neo4j-admin set-initial-password neo4jISZ
+mkdir figures
