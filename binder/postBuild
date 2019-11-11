@@ -4,7 +4,15 @@ if [ ! -f neo4j-community-3.5.12-unix.tar.gz ]; then
 fi
 tar -xvf neo4j-community-3.5.12-unix.tar.gz
 
+if [ ! -f neo4j-graph-algorithms-3.5.12.1-standalone.zip ]; then
+  wget https://s3-eu-west-1.amazonaws.com/com.neo4j.graphalgorithms.dist/neo4j-graph-algorithms-3.5.12.1-standalone.zip
+fi
+unzip neo4j-graph-algorithms-3.5.12.1-standalone.zip
+
+cp neo4j-graph-algorithms-3.5.12.1-standalone.jar neo4j-community-3.5.12/plugins
+
 echo "dbms.connectors.default_listen_address=0.0.0.0" >> neo4j-community-3.5.12/conf/neo4j.conf
+echo "dbms.security.procedures.unrestricted=algo.*" >> neo4j-community-3.5.12/conf/neo4j.conf
 
 neo4j-community-3.5.12/bin/neo4j-admin set-initial-password neo4jISZ
 mkdir figures
