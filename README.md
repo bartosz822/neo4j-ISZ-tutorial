@@ -11,5 +11,4 @@ Or use jupyter-repo2docker
 ```
 sudo pip install jupyter-repo2docker
 jupyter-repo2docker https://github.com/bartosz822/neo4j-ISZ-tutorial
-
 ```
