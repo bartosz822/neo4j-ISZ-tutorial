@@ -7,3 +7,4 @@ networkx
 matplotlib
 numpy
 ipython-cypher
+ipython-autotime
